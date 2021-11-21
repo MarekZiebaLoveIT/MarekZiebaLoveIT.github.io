@@ -272,7 +272,6 @@ header {
 /* ABOUT */
 
 #about {
-    /* height: 220vh; */
     background: rgb(255, 255, 255);
     position: relative;
     width: 100%;
@@ -393,7 +392,6 @@ header {
 /* About Skills */
 
 .about-skills {
-    width: 350px;
     text-align: left;
 }
 
