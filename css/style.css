@@ -337,13 +337,9 @@ header {
 
 .about-content {
     width: 350px;
-    height: 943px;
+    height: 950px;
     margin: 0 auto;
     margin-top: 550px;
-    /* position: absolute; */
-    /* top: 32%; */
-    /* left: 50%; */
-    /* margin-left: -175px; */
     padding: 0 20px;
 }
 
@@ -397,7 +393,7 @@ header {
 /* About Skills */
 
 .about-skills {
-    max-width: 350px;
+    width: 350px;
     text-align: left;
 }
 
@@ -491,13 +487,8 @@ header {
 /* About Buttons */
 
 .about-buttons {
-    /* position: absolute; */
-    /* top: 88%; */
-    /* left: 50%; */
     width: 350px;
     margin: 50px auto;
-    /* margin-top: 100px; */
-    /* margin-left: -175px; */
     height: 107.6px;
     text-align: center;
     display: flex;
@@ -517,8 +508,6 @@ header {
     letter-spacing: .15rem;
     width: 180px;
     margin-bottom: 15px;
-    /* position: absolute;
-    left: 10px; */
 }
 
 .button-download {
@@ -533,8 +522,6 @@ header {
     letter-spacing: .15rem;
     width: 180px;
     margin-bottom: 15px;
-    /* position: absolute;
-    right: 10px; */
 }
 
 .button-hire:hover {
@@ -566,7 +553,6 @@ header {
 
 #portfolio {
     background: #fff;
-    /* height: 250vh; */
     position: relative;
     width: 100%;
     display: flex;
@@ -606,15 +592,9 @@ header {
 /* -------------- Portfolio Gallery --------------- */
 
 .container {
-    /* border: 2px solid blue; */
-    /* position: absolute; */
-    /* top: 16%; */
     width: 350px;
     margin: 0 auto;
-    margin-top: 310px;
-    /* left: 50%; */
-    /* margin-left: -175px; */
-    /* margin-top: 2rem; */
+    margin-top: 350px;
     text-align: center;
     padding-left: 10px;
     justify-content: center;
@@ -702,8 +682,10 @@ header {
   
   .container img {
     animation:blr 2s;
-    filter:blur(10px);
-  } @keyframes blr {
+    filter: blur(10px);
+  } 
+  
+  @keyframes blr {
     from {filter:blur(0)}
   }
   
@@ -714,9 +696,11 @@ header {
   .container li {
     transition:opacity 0.3s;
   }
+
   .container li a {
     transition:all 0.15s;
   }
+
   .container li:hover a {
     transition:transform 0.3s;
     transform:translate(0);
@@ -725,6 +709,7 @@ header {
   .container ul:hover li {
     opacity:0.1;
   }
+
   .container ul:hover li:hover {
     opacity:1;
     transition:clip-path 0.4s 0.3s;
@@ -733,9 +718,10 @@ header {
   }
   
   .container img {
-    filter:blur(10px);
+    filter:blur(0px) grayscale(100%);
     transition:filter 0.7s;
   }
+
   .container li:hover img {
     filter:blur(0);
   }
@@ -747,8 +733,6 @@ header {
 
 .stats-container {
     position: relative;
-    /* top: 84%; */
-    /* height: 30vh; */
     width: 100%;
     background-color: #cc005f;
     margin-top: 90px;
@@ -760,9 +744,6 @@ header {
     width: 350px;
     height: 222px;
     margin: 10px auto;
-    /* position: absolute; */
-    /* left: 50%; */
-    /* margin-left: -175px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -795,15 +776,15 @@ header {
 .counter:nth-of-type(2) {
     border-right: 1px solid rgba(255, 255, 255, 0.158);
     border-left: 1px solid rgba(255, 255, 255, 0.158);
-    padding: 0 2px 0 2px;
+    padding: 0 22px 0 22px;
 }
 
 .counter:nth-of-type(1) {
-    margin-right: -2px;
+    margin-right: 22px;
 }
 
 .counter:nth-of-type(3) {
-    margin-left: -2px;
+    margin-left: 22px;
 }
 
 
@@ -813,15 +794,11 @@ header {
 
 #contact {
     background-color: #131313;
-    /* background-color: #fff; */
-    /* height: 130vh; */
     width: 100%;
-    /* min-height: 720px; */
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* top: -253px; */
 }
 
 .contact-content {
@@ -856,14 +833,10 @@ header {
 /* COntact form */
 
 .contact-form {
-    /* position: absolute; */
     width: 350px;
     height: 460px;
     margin: 0 auto;
     margin-top: 320px;
-    /* top: 30%; */
-    /* left: 50%; */
-    /* margin-left: -350px; */
 }
 
 .form-container {
@@ -885,7 +858,7 @@ header {
 
 .form-container:nth-child(4) {
     width: 340px;
-    height: 197.5px;
+    height: 196.5px;
 }
 
 textarea {
@@ -924,7 +897,6 @@ textarea {
 .form-buttons input:hover {
     background: #cc005f;
     color: #fff;
-    /* border-radius: 5px; */
     box-shadow: 0 0 5px #cc005f,
                 0 0 15px #cc005f,
                 0 0 30px #cc005f,
@@ -1057,3 +1029,203 @@ footer {
 }
 
 
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+    .intro-content {
+        width: 750px;
+        margin-left: -375px;
+    }
+
+    .intro-content h5 {
+        font-size: 2rem;
+    }
+
+    .intro-content h1 {
+        font-size: 5rem;
+    }
+
+    .intro-exp {
+        font-size: 1.5rem;
+    }
+
+    .intro-social {
+        font-size: 3rem;
+    }
+
+    .about-intro {
+        width: 750px;
+        margin-left: -375px;
+    }
+
+    .about-intro h5 {
+        font-size: 2rem;
+    }
+
+    .about-intro h1 {
+        font-size: 3rem;
+    }
+
+    .about-info {
+        width: 750px;
+        flex-direction: row;
+    }
+
+    .about-info img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .lead {
+        width: 750px;
+        font-size: 1.3rem;
+    }
+
+    .about-content {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        height: 650px;
+    }
+
+    .about-profile, .about-skills {
+        width: 330px;
+    }
+
+    .about-profile h3, .about-skills h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-profile p, .about-skills p {
+        font-size: 1.1rem;
+    }
+
+    .profile-list {
+        font-size: 1.1rem;
+    }
+
+    .skills-list, .skills-extra {
+        font-size: 4.5rem;
+    }
+
+    .skills-extra li img {
+        width: 70px;
+    }
+
+    .skills-list li i, .skills-extra li i {
+        padding-left: 10px;
+    }
+    
+    .about-buttons {
+        width: 750px;
+        flex-direction: row;
+        margin: 20px auto;
+        justify-content: space-around;
+    }
+
+    .button-hire, .button-download {
+        font-size: 1rem;
+        padding: 20px 30px;
+        width: 250px;
+    }
+
+    .portfolio-intro {
+        width: 750px;
+        margin-left: -375px;
+    }
+
+    .portfolio-intro h5 {
+        font-size: 2rem;
+    }
+
+    .portfolio-intro h1 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+
+    .portfolio-intro .lead {
+        width: 750px;
+    }
+
+    .container img {
+        filter: blur(10px);
+    }
+
+    .counter-container {
+        width: 750px;
+    }
+
+    .counter h3 {
+        font-size: 2.5rem;
+    }
+
+    .counter h5 {
+        font-size: 1.3rem;
+    }
+
+    .counter i {
+        font-size: 2.2rem;
+    }
+
+    .counter:nth-of-type(2) {
+        padding: 0 35px 0 35px;
+    }
+
+    .counter:nth-of-type(1) {
+        margin-right: -35px;
+    }
+
+    .counter:nth-of-type(3) {
+        margin-left: -35px;
+    }
+
+    .contact-content {
+        width: 750px;
+        margin-left: -375px;
+    }
+
+    .contact-content h5 {
+        font-size: 2rem;
+    }
+
+    .contact-content h1 {
+        font-size: 3rem;
+    }
+
+    .contact-content .lead {
+        width: 750px;
+    }
+
+    .contact-form {
+        width: 750px;
+    }
+
+    .form-container {
+        width: 740px;
+    }
+
+    .form-container input {
+        width: 740px;
+    }
+
+    .form-container:nth-child(4) {
+        width: 740px;
+    }
+
+    textarea {
+        width: 740px;
+    }
+
+    .form-buttons input {
+        width: 746px;
+    }
+
+    .contact-form a {
+        width: 746px;
+    }
+
+}
