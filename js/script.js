@@ -123,6 +123,7 @@ const resetBtn = document.querySelector('.reset-button');
 resetBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 	document.querySelector('form').reset();
+	document.querySelector('.errors').remove();
 });
 
 /////////////////////////////////////////////////////////////////////////////////
