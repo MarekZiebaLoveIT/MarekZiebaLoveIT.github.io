@@ -4,12 +4,15 @@
 
 const wrapperMenu = document.querySelector('.wrapper-menu');
 const nav = document.querySelector('.main-nav-container');
-const hideMenu = document.querySelectorAll('.main-navigation a');
+const hideMenu = document.querySelectorAll('.main-nav-container a');
 
 wrapperMenu.addEventListener('click', () => {
 	wrapperMenu.classList.toggle('open');
     nav.classList.toggle('active');
 });
+
+
+
 
 
 // $(function() {
@@ -54,11 +57,13 @@ const panels = document.querySelectorAll('.panel');
 function toggleOpen() {
 	this.classList.toggle('open');
 }
+
 function toggleActive(e) {
 	if (e.propertyName.includes('flex')) {
 		this.classList.toggle('open-active');
 	}
 }
+
 panels.forEach(panel => panel.addEventListener('click',toggleOpen));
 panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
 
@@ -105,7 +110,7 @@ $(function(){
         }, 1500)
 
     });
-    
+
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -121,4 +126,5 @@ resetBtn.addEventListener('click', (e) => {
 });
 
 /////////////////////////////////////////////////////////////////////////////////
+
 
