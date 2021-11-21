@@ -128,3 +128,48 @@ resetBtn.addEventListener('click', (e) => {
 /////////////////////////////////////////////////////////////////////////////////
 
 
+// Form Validation
+
+function validate(e) {
+
+	e.preventDefault();
+
+	const name = this.name.value;
+	const mail = this.mail.value;
+	const subject = this.subject.value;
+	const message = this.message.value;
+
+	const placeError = document.querySelector('.errors');
+
+
+	let errors = [];
+
+	const namePattern = /^[A-Ż]+[a-ż]{3,20}$/;
+	const testName = namePattern.test(name);
+	if (!testName)
+		errors.push('Name too short');
+	
+	const mailPattern = /^[a-z\d]+[\w.-]*@[a-z\d]+[a-z\d-]*\.[a-z]{2,4}$/i;
+	const testMail = mailPattern.test(mail);
+	if (!testMail)
+		errors.push('Invalid e-mail format');
+
+	const subjectPattern = /^[a-ż]{3,20}$/;
+	const testSubject = subjectPattern.test(subject);
+	if (!testSubject)
+		errors.push('Subject too short');
+
+	const messagePattern = /^[a-ż]{3,20}$/;
+	const testMessage = messagePattern.test(message);
+	if (!testMessage)
+		errors.push('Message too short');
+
+	if (errors.length > 0) {
+		placeError.innerHTML = errors.join('<br>');
+	}
+
+	console.log(errors);
+}
+
+const form = document.querySelector('form');
+form.addEventListener('submit', validate);

@@ -1009,6 +1009,10 @@ textarea {
     }
 }
 
+.errors {
+    color: red;
+}
+
 /* FOOTER */
 
 .about {
@@ -1089,9 +1093,10 @@ footer {
         justify-content: space-between;
         height: 650px;
     }
-
+    
     .about-profile, .about-skills {
-        width: 330px;
+        padding: 0 20px 0 20px;
+        width: 750px;
     }
 
     .about-profile h3, .about-skills h3 {
