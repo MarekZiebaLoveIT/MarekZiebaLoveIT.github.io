@@ -14,7 +14,6 @@ wrapperMenu.addEventListener('click', () => {
 
 
 
-
 // $(function() {
 
 // 	$(".wrapper-menu").on("click", function () {
@@ -26,6 +25,7 @@ wrapperMenu.addEventListener('click', () => {
 // 	});
 
 // });
+
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -123,7 +123,7 @@ const resetBtn = document.querySelector('.reset-button');
 resetBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 	document.querySelector('form').reset();
-	document.querySelector('.errors').remove();
+	// document.querySelector('.errors').remove();
 });
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -155,12 +155,12 @@ function validate(e) {
 	if (!testMail)
 		errors.push('Invalid e-mail format');
 
-	const subjectPattern = /^[a-ż]{3,20}$/;
+	const subjectPattern = /^[\w]{3,20}$/;
 	const testSubject = subjectPattern.test(subject);
 	if (!testSubject)
 		errors.push('Subject too short');
 
-	const messagePattern = /^[a-ż]{3,20}$/;
+	const messagePattern = /^[\w]{3,20}$/;
 	const testMessage = messagePattern.test(message);
 	if (!testMessage)
 		errors.push('Message too short');
@@ -168,9 +168,11 @@ function validate(e) {
 	if (errors.length > 0) {
 		placeError.innerHTML = errors.join('<br>');
 	}
-
-	console.log(errors);
 }
 
 const form = document.querySelector('form');
 form.addEventListener('submit', validate);
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
