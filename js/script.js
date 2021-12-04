@@ -35,13 +35,13 @@ wrapperMenu.addEventListener('click', () => {
 
 const backToTop = document.querySelector('.backtotop');
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		backToTop.style.display = 'block';
 	} else {
 		backToTop.style.display = 'none';
 	}
-}
+});
 
 backToTop.addEventListener('click', () => {
 	document.body.scrollTop = 0;
@@ -73,25 +73,46 @@ panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
 // Stats counter
 
 const counters = document.querySelectorAll('.count');
-const speed = 1500;
+const speed = 750;
+const stats = document.querySelector('.stats-container');
 
+// start counting when element is in the viewport
 
-counters.forEach((counter) => {
-	const updateCount = () => {
-		const target = parseInt(counter.getAttribute('data-target'));
-		const count = parseInt(counter.innerText);
-		const increment = Math.trunc(target / speed);
+const isInViewport = function (elem) {
+    
+    const bounding = elem.getBoundingClientRect();
 
-		if (count < target) {
-			counter.innerText = count + increment;
-			setTimeout(updateCount, 1);
-		} else {
-			count.innerText = target;
-		}
-	};
-	updateCount();
-});
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 
+}
+
+window.addEventListener('scroll', () => {
+    if (isInViewport(stats)) {
+
+		// changing digits
+        counters.forEach((counter) => {
+            const updateCount = () => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const count = parseInt(counter.innerText);
+                const increment = Math.trunc(target / speed);
+        
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(updateCount, 30);
+                } else {
+                    count.innerText = target;
+                }
+            };
+            updateCount();
+        });
+
+    }
+}, false);
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -123,7 +144,7 @@ const resetBtn = document.querySelector('.reset-button');
 resetBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 	document.querySelector('form').reset();
-	// document.querySelector('.errors').remove();
+	document.querySelector('.errors').innerHTML = '';
 });
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -143,7 +164,7 @@ function validate(e) {
 	const placeError = document.querySelector('.errors');
 
 
-	let errors = [];
+	const errors = [];
 
 	const namePattern = /^[A-Ż]+[a-ż]{3,20}$/;
 	const testName = namePattern.test(name);
