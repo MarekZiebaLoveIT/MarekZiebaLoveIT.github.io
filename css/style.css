@@ -409,45 +409,48 @@ header {
     color: #888;
     font-size: .8rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.3;
 }
 
 .skills-list, .skills-extra {
-    display: flex;
-    font-size: 3.5rem;
+    display: block;
+    font-size: .9rem;
+    color: #313131;
     flex-wrap: wrap;
-    letter-spacing: 1.2rem;
-    list-style: none;
-    text-align: center;
+    letter-spacing: .1rem;
+    list-style: outside;
+    /* text-align: center; */
     width: 100%;
-    justify-content: space-around;
+    /* justify-content: end; */
 }
 
 .skills-list li {
-    margin-bottom: 2rem;
+    margin-bottom: .8rem;
     align-items: center;
-    width: 33.333333%;
+    /* width: 33.333333%; */
 }
 
 .skills-extra li {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    margin-bottom: .8rem;
     align-items: center;
-    width: 25%;
+    /* width: 25%; */
 }
 
-.skills-extra li img {
+/* .skills-extra li img {
     width: 60px;
-}
+} */
 
-.skills-list li i, .skills-extra li i {
+/* .skills-list li i, .skills-extra li i {
     padding-left: 15px;
-}
+} */
 
 /* --------- Skills icons colors --------------- */
 
-.fa-html5 {
+/* .fa-html5 {
     color: #e34c26;
 }
 
@@ -477,7 +480,7 @@ header {
 
 .fa-angular {
     color: #dd1b16;
-}
+} */
 
 /* -------------------------------------- */
 
@@ -486,7 +489,7 @@ header {
 
 .about-buttons {
     width: 350px;
-    margin: 50px auto;
+    margin:110px auto;
     height: 107.6px;
     text-align: center;
     display: flex;
@@ -499,7 +502,7 @@ header {
     color: #313131;
     text-decoration: none;
     border: 3px solid #313131;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: bold;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -513,7 +516,7 @@ header {
     border: 3px solid #313131;
     color: #fff;
     text-decoration: none;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: bold;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -868,6 +871,7 @@ textarea {
     font-size: 1rem;
     outline: none;
     padding-top: 10px;
+    resize: none;
 }
 
 .form-container:hover, .form-container:focus {
@@ -1053,7 +1057,7 @@ footer {
     }
 
     .intro-exp {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .intro-social {
@@ -1106,6 +1110,7 @@ footer {
 
     .about-profile p, .about-skills p {
         font-size: 1.1rem;
+        margin-top: 20px;
     }
 
     .profile-list {
@@ -1113,16 +1118,18 @@ footer {
     }
 
     .skills-list, .skills-extra {
-        font-size: 4.2rem;
+        font-size: .9rem;
+        color: #313131;
+        list-style: outside;
     }
 
-    .skills-extra li img {
+    /* .skills-extra li img {
         width: 65px;
-    }
+    } */
 
-    .skills-list li i, .skills-extra li i {
+    /* .skills-list li i, .skills-extra li i {
         padding-left: 10px;
-    }
+    } */
     
     .about-buttons {
         width: 750px;
