@@ -53,19 +53,14 @@ backToTop.addEventListener('click', () => {
 
 // Gallery 
 
-const panels = document.querySelectorAll('.panel');
-function toggleOpen() {
-	this.classList.toggle('open');
-}
+const card = document.querySelectorAll(".card__inner");
 
-function toggleActive(e) {
-	if (e.propertyName.includes('flex')) {
-		this.classList.toggle('open-active');
-	}
-}
+for (let i=0; i < card.length; i++ ) {
+  card[i].addEventListener("click", function (e) {
+    card[i].classList.toggle('is-flipped');
+  });
 
-panels.forEach(panel => panel.addEventListener('click',toggleOpen));
-panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
