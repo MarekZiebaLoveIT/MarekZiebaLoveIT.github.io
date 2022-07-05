@@ -696,7 +696,8 @@ header {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
-    border: 2px solid #cc005f;
+    border-bottom: 2px solid #cc005f;
+    padding-bottom: 7px;
     border-radius: 7px;
     text-align: center;
 }
